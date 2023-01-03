@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
-
+import React from 'react';
+import { Route, Routes, NavLink, } from 'react-router-dom';
+import {createContext,useState } from 'react';
+import EventForm from './Components/EventForm';
+import EventList from './Components/EventList';
+import EventListDetails from './Components/EventListDetails';
+export const eventContext=createContext()
 function App() {
+  const [eventList, setEventList]=useState([])
+  const contextValue={eventList, setEventList}
   return (
+      <eventContext.Provider value={contextValue}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavLink className="link" to="/EventForm">Event Form</NavLink>
+        <br/>
+      <NavLink className="link" to="/EventListPage">Event List</NavLink>
+        <br/>
+      <Routes>
+        <Route path="/EventListPage" element={<EventList/>}> </Route>
+        <Route path="/EventForm" element={<EventForm/>}> </Route>
+        <Route path="/EventListDetails/:Event" element={<EventListDetails></EventListDetails>}> </Route>
+      </Routes>
     </div>
+      </eventContext.Provider>
   );
 }
-
 export default App;

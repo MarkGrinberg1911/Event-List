@@ -1,0 +1,67 @@
+.form input{
+    
+    
+   
+
+    width:10vw;
+    height: 5vh;
+    border-style: solid;
+    border-color: red;
+    background-color: white;
+    border-radius: 80;
+    text-align: center;
+    font-size: large;
+    color:black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.hero{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.del{
+    font-size: xx-large;
+    color: white;
+    background-color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:black;
+    border-style: solid;
+    border-color: red;
+}
+.details{
+   
+    color: white;
+   
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:black;
+    
+
+}
+.list{
+    border-style: solid;
+    border-color: white;
+    text-align: center;
+    font-size: large;
+    color:white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.details{
+   
+    width: 10vw;
+    border-style: solid;
+    border-color: red;
+    background-color: white;
+    border-radius: 80;
+    text-align: center;
+    font-size: large;
+    color:black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    
+}
